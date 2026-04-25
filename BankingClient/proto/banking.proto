@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package org.paul;
+
+option java_package = "banking";
+option java_multiple_files = true;
+
+service BankingService {
+  rpc Deposit    (DepositRequest)   returns (OperationResponse);
+  rpc Withdraw   (WithdrawRequest)  returns (OperationResponse);
+  rpc Transfer   (TransferRequest)  returns (OperationResponse);
+  rpc GetBalance (BalanceRequest)   returns (BalanceResponse);
+}
+
+message DepositRequest  { string account_id = 1; double amount = 2; }
+message WithdrawRequest { string account_id = 1; double amount = 2; }
+message TransferRequest { string from_account = 1; string to_account = 2; double amount = 3; }
+message BalanceRequest  { string account_id = 1; }
+
+message OperationResponse { bool success = 1; string message = 2; double new_balance = 3; }
+message BalanceResponse   { string account_id = 1; double balance = 2; }

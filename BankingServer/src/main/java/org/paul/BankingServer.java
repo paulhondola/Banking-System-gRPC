@@ -2,14 +2,15 @@ package org.paul;
 
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
+import io.grpc.ServerInterceptors;
 
-public class MathServer {
+public class BankingServer {
 
     public static void main(String[] args) {
         try {
             Server server = ServerBuilder
                     .forPort(50051)
-                    .addService(new MathService())
+                    .addService(ServerInterceptors.intercept(new BankingService(), new LoggingInterceptor()))
                     .build();
 
             server.start();
