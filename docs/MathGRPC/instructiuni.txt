@@ -1,0 +1,23 @@
+
+If you don’t use Maven, you must run protoc manually with the protoc-gen-grpc-java plugin and then add the generated classes on the classpath.
+
+protoc --java_out=. --grpc-java_out=. math.proto
+
+The option --java_out generates java classes of interface:
+this  generates: BinaryOpRequest, BinaryOpResponse, 
+
+The option --grpc-java_out generates the service class in java:
+MathServiceGrpc.java
+This file contains:
+- MathServiceImplBase the abstract base class for server object (your MathImpl
+will have to extend it)
+- Client stubs: MathServiceBlockingStub if synchronous client, MathServiceStub if async client
+
+
+With Maven:
+
+mvn clean compile
+
+mvn exec:java -Dexec.mainClass="grpc1.MathServerMain"
+
+mvn exec:java -Dexec.mainClass="grpc1.MathClient"
