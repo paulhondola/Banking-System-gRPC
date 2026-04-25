@@ -3,8 +3,12 @@ package org.paul;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import io.grpc.ServerInterceptors;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class BankingServer {
+
+    private static final Logger logger = LoggerFactory.getLogger(BankingServer.class);
 
     public static void main(String[] args) {
         try {
@@ -14,12 +18,12 @@ public class BankingServer {
                     .build();
 
             server.start();
-            System.out.println("Server started on port 50051");
+            logger.info("Server started on port 50051");
 
             server.awaitTermination();
 
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error("Server failed to start or was interrupted", e);
         }
     }
 }

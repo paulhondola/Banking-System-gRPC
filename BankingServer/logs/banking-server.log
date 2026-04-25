@@ -1,0 +1,28 @@
+2026-04-25 20:41:53.939 [main] ERROR org.paul.BankingServer - Server failed to start or was interrupted
+java.io.IOException: Failed to bind to address 0.0.0.0/0.0.0.0:50051
+	at io.grpc.netty.shaded.io.grpc.netty.NettyServer.start(NettyServer.java:333) ~[grpc-netty-shaded-1.62.2.jar:1.62.2]
+	at io.grpc.internal.ServerImpl.start(ServerImpl.java:185) ~[grpc-core-1.62.2.jar:1.62.2]
+	at io.grpc.internal.ServerImpl.start(ServerImpl.java:94) ~[grpc-core-1.62.2.jar:1.62.2]
+	at org.paul.BankingServer.main(BankingServer.java:20) [main/:?]
+Caused by: java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method) ~[?:?]
+	at java.base/sun.nio.ch.Net.bind(Net.java:522) ~[?:?]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:335) ~[?:?]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:297) ~[?:?]
+	at io.grpc.netty.shaded.io.netty.channel.socket.nio.NioServerSocketChannel.doBind(NioServerSocketChannel.java:141) ~[grpc-netty-shaded-1.62.2.jar:1.62.2]
+	at io.grpc.netty.shaded.io.netty.channel.AbstractChannel$AbstractUnsafe.bind(AbstractChannel.java:562) ~[grpc-netty-shaded-1.62.2.jar:1.62.2]
+	at io.grpc.netty.shaded.io.netty.channel.DefaultChannelPipeline$HeadContext.bind(DefaultChannelPipeline.java:1334) ~[grpc-netty-shaded-1.62.2.jar:1.62.2]
+	at io.grpc.netty.shaded.io.netty.channel.AbstractChannelHandlerContext.invokeBind(AbstractChannelHandlerContext.java:600) ~[grpc-netty-shaded-1.62.2.jar:1.62.2]
+	at io.grpc.netty.shaded.io.netty.channel.AbstractChannelHandlerContext.bind(AbstractChannelHandlerContext.java:579) ~[grpc-netty-shaded-1.62.2.jar:1.62.2]
+	at io.grpc.netty.shaded.io.netty.channel.DefaultChannelPipeline.bind(DefaultChannelPipeline.java:973) ~[grpc-netty-shaded-1.62.2.jar:1.62.2]
+	at io.grpc.netty.shaded.io.netty.channel.AbstractChannel.bind(AbstractChannel.java:260) ~[grpc-netty-shaded-1.62.2.jar:1.62.2]
+	at io.grpc.netty.shaded.io.netty.bootstrap.AbstractBootstrap$2.run(AbstractBootstrap.java:356) ~[grpc-netty-shaded-1.62.2.jar:1.62.2]
+	at io.grpc.netty.shaded.io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173) ~[grpc-netty-shaded-1.62.2.jar:1.62.2]
+	at io.grpc.netty.shaded.io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166) ~[grpc-netty-shaded-1.62.2.jar:1.62.2]
+	at io.grpc.netty.shaded.io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470) ~[grpc-netty-shaded-1.62.2.jar:1.62.2]
+	at io.grpc.netty.shaded.io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569) ~[grpc-netty-shaded-1.62.2.jar:1.62.2]
+	at io.grpc.netty.shaded.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[grpc-netty-shaded-1.62.2.jar:1.62.2]
+	at io.grpc.netty.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[grpc-netty-shaded-1.62.2.jar:1.62.2]
+	at io.grpc.netty.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[grpc-netty-shaded-1.62.2.jar:1.62.2]
+	at java.base/java.lang.Thread.run(Thread.java:1474) ~[?:?]
+2026-04-25 20:44:59.945 [main] INFO  org.paul.BankingServer - Server started on port 50051
