@@ -26,3 +26,503 @@ Caused by: java.net.BindException: Address already in use
 	at io.grpc.netty.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[grpc-netty-shaded-1.62.2.jar:1.62.2]
 	at java.base/java.lang.Thread.run(Thread.java:1474) ~[?:?]
 2026-04-25 20:44:59.945 [main] INFO  org.paul.BankingServer - Server started on port 50051
+2026-04-25 20:49:27.415 [main] INFO  org.paul.BankingServer - Server started on port 50051
+2026-04-25 20:55:09.226 [main] INFO  org.paul.BankingServer - Server started on port 50051
+2026-04-25 20:55:13.210 [ForkJoinPool.commonPool-worker-1] INFO  org.paul.BankingService - Deposit acc1 += 100.0 → balance: 100.0
+2026-04-25 20:55:13.219 [grpc-default-executor-0] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Deposit in 23ms
+2026-04-25 20:55:13.222 [ForkJoinPool.commonPool-worker-1] INFO  org.paul.BankingService - Withdrawal acc1 -= 50.0 → balance: 50.0
+2026-04-25 20:55:13.223 [grpc-default-executor-0] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Withdraw in 3ms
+2026-04-25 20:55:13.226 [ForkJoinPool.commonPool-worker-1] INFO  org.paul.BankingService - Transfer 25.0 from acc1 to acc2 → new balance: 25.0
+2026-04-25 20:55:13.227 [grpc-default-executor-0] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Transfer in 3ms
+2026-04-25 20:55:13.229 [grpc-default-executor-0] INFO  org.paul.BankingService - Balance for acc1: 25.0
+2026-04-25 20:55:13.231 [grpc-default-executor-0] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/GetBalance in 3ms
+2026-04-25 20:55:23.267 [ForkJoinPool.commonPool-worker-1] INFO  org.paul.BankingService - Deposit acc1 += 100.0 → balance: 125.0
+2026-04-25 20:55:23.268 [grpc-default-executor-0] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Deposit in 1ms
+2026-04-25 20:55:23.269 [ForkJoinPool.commonPool-worker-1] INFO  org.paul.BankingService - Withdrawal acc1 -= 50.0 → balance: 75.0
+2026-04-25 20:55:23.270 [grpc-default-executor-0] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Withdraw in 1ms
+2026-04-25 20:55:23.271 [ForkJoinPool.commonPool-worker-1] INFO  org.paul.BankingService - Transfer 25.0 from acc1 to acc2 → new balance: 50.0
+2026-04-25 20:55:23.272 [grpc-default-executor-0] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Transfer in 1ms
+2026-04-25 20:55:23.273 [ForkJoinPool.commonPool-worker-1] INFO  org.paul.BankingService - Balance for acc1: 50.0
+2026-04-25 20:55:23.274 [grpc-default-executor-0] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/GetBalance in 1ms
+2026-04-25 20:55:27.098 [ForkJoinPool.commonPool-worker-1] INFO  org.paul.BankingService - Deposit acc1 += 100.0 → balance: 150.0
+2026-04-25 20:55:27.099 [grpc-default-executor-0] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Deposit in 1ms
+2026-04-25 20:55:27.101 [ForkJoinPool.commonPool-worker-1] INFO  org.paul.BankingService - Withdrawal acc1 -= 50.0 → balance: 100.0
+2026-04-25 20:55:27.101 [grpc-default-executor-0] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Withdraw in 1ms
+2026-04-25 20:55:27.102 [ForkJoinPool.commonPool-worker-1] INFO  org.paul.BankingService - Transfer 25.0 from acc1 to acc2 → new balance: 75.0
+2026-04-25 20:55:27.103 [grpc-default-executor-0] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Transfer in 1ms
+2026-04-25 20:55:27.104 [ForkJoinPool.commonPool-worker-1] INFO  org.paul.BankingService - Balance for acc1: 75.0
+2026-04-25 20:55:27.105 [grpc-default-executor-0] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/GetBalance in 1ms
+2026-04-25 20:55:30.936 [ForkJoinPool.commonPool-worker-1] INFO  org.paul.BankingService - Deposit acc1 += 100.0 → balance: 175.0
+2026-04-25 20:55:30.937 [grpc-default-executor-0] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Deposit in 1ms
+2026-04-25 20:55:30.938 [ForkJoinPool.commonPool-worker-1] INFO  org.paul.BankingService - Withdrawal acc1 -= 50.0 → balance: 125.0
+2026-04-25 20:55:30.939 [grpc-default-executor-0] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Withdraw in 1ms
+2026-04-25 20:55:30.940 [ForkJoinPool.commonPool-worker-1] INFO  org.paul.BankingService - Transfer 25.0 from acc1 to acc2 → new balance: 100.0
+2026-04-25 20:55:30.941 [grpc-default-executor-0] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Transfer in 1ms
+2026-04-25 20:55:30.942 [ForkJoinPool.commonPool-worker-1] INFO  org.paul.BankingService - Balance for acc1: 100.0
+2026-04-25 20:55:30.943 [grpc-default-executor-0] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/GetBalance in 1ms
+2026-04-25 20:55:32.528 [ForkJoinPool.commonPool-worker-1] INFO  org.paul.BankingService - Deposit acc1 += 100.0 → balance: 200.0
+2026-04-25 20:55:32.529 [grpc-default-executor-0] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Deposit in 1ms
+2026-04-25 20:55:32.530 [ForkJoinPool.commonPool-worker-1] INFO  org.paul.BankingService - Withdrawal acc1 -= 50.0 → balance: 150.0
+2026-04-25 20:55:32.531 [grpc-default-executor-0] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Withdraw in 0ms
+2026-04-25 20:55:32.531 [ForkJoinPool.commonPool-worker-1] INFO  org.paul.BankingService - Transfer 25.0 from acc1 to acc2 → new balance: 125.0
+2026-04-25 20:55:32.532 [grpc-default-executor-0] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Transfer in 0ms
+2026-04-25 20:55:32.533 [ForkJoinPool.commonPool-worker-1] INFO  org.paul.BankingService - Balance for acc1: 125.0
+2026-04-25 20:55:32.533 [grpc-default-executor-0] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/GetBalance in 0ms
+2026-04-25 20:56:56.925 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Deposit acc1 += 100.0 → balance: 225.0
+2026-04-25 20:56:56.926 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Deposit in 1ms
+2026-04-25 20:56:56.928 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Withdrawal acc1 -= 50.0 → balance: 175.0
+2026-04-25 20:56:56.929 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Withdraw in 0ms
+2026-04-25 20:56:56.929 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Transfer 25.0 from acc1 to acc2 → new balance: 150.0
+2026-04-25 20:56:56.930 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Transfer in 0ms
+2026-04-25 20:56:56.930 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Balance for acc1: 150.0
+2026-04-25 20:56:56.931 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/GetBalance in 0ms
+2026-04-25 20:56:58.086 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Deposit acc1 += 100.0 → balance: 250.0
+2026-04-25 20:56:58.086 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Deposit in 0ms
+2026-04-25 20:56:58.087 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Withdrawal acc1 -= 50.0 → balance: 200.0
+2026-04-25 20:56:58.088 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Withdraw in 1ms
+2026-04-25 20:56:58.089 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Transfer 25.0 from acc1 to acc2 → new balance: 175.0
+2026-04-25 20:56:58.090 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Transfer in 0ms
+2026-04-25 20:56:58.091 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Balance for acc1: 175.0
+2026-04-25 20:56:58.091 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/GetBalance in 0ms
+2026-04-25 20:56:59.173 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Deposit acc1 += 100.0 → balance: 275.0
+2026-04-25 20:56:59.174 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Deposit in 1ms
+2026-04-25 20:56:59.175 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Withdrawal acc1 -= 50.0 → balance: 225.0
+2026-04-25 20:56:59.176 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Withdraw in 0ms
+2026-04-25 20:56:59.176 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Transfer 25.0 from acc1 to acc2 → new balance: 200.0
+2026-04-25 20:56:59.177 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Transfer in 0ms
+2026-04-25 20:56:59.178 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Balance for acc1: 200.0
+2026-04-25 20:56:59.178 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/GetBalance in 0ms
+2026-04-25 20:57:02.112 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Deposit acc1 += 100.0 → balance: 300.0
+2026-04-25 20:57:02.112 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Deposit in 0ms
+2026-04-25 20:57:02.113 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Withdrawal acc1 -= 50.0 → balance: 250.0
+2026-04-25 20:57:02.114 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Withdraw in 1ms
+2026-04-25 20:57:02.115 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Transfer 25.0 from acc1 to acc2 → new balance: 225.0
+2026-04-25 20:57:02.116 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Transfer in 0ms
+2026-04-25 20:57:02.117 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Balance for acc1: 225.0
+2026-04-25 20:57:02.117 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/GetBalance in 0ms
+2026-04-25 20:57:03.046 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Deposit acc1 += 100.0 → balance: 325.0
+2026-04-25 20:57:03.047 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Deposit in 0ms
+2026-04-25 20:57:03.048 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Withdrawal acc1 -= 50.0 → balance: 275.0
+2026-04-25 20:57:03.048 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Withdraw in 0ms
+2026-04-25 20:57:03.049 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Transfer 25.0 from acc1 to acc2 → new balance: 250.0
+2026-04-25 20:57:03.050 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Transfer in 1ms
+2026-04-25 20:57:03.051 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Balance for acc1: 250.0
+2026-04-25 20:57:03.052 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/GetBalance in 0ms
+2026-04-25 20:57:04.710 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Deposit acc1 += 100.0 → balance: 350.0
+2026-04-25 20:57:04.711 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Deposit in 0ms
+2026-04-25 20:57:04.712 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Withdrawal acc1 -= 50.0 → balance: 300.0
+2026-04-25 20:57:04.712 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Withdraw in 0ms
+2026-04-25 20:57:04.714 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Transfer 25.0 from acc1 to acc2 → new balance: 275.0
+2026-04-25 20:57:04.714 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Transfer in 1ms
+2026-04-25 20:57:04.715 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Balance for acc1: 275.0
+2026-04-25 20:57:04.716 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/GetBalance in 0ms
+2026-04-25 20:57:05.551 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Deposit acc1 += 100.0 → balance: 375.0
+2026-04-25 20:57:05.552 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Deposit in 1ms
+2026-04-25 20:57:05.553 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Withdrawal acc1 -= 50.0 → balance: 325.0
+2026-04-25 20:57:05.554 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Withdraw in 0ms
+2026-04-25 20:57:05.555 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Transfer 25.0 from acc1 to acc2 → new balance: 300.0
+2026-04-25 20:57:05.555 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Transfer in 0ms
+2026-04-25 20:57:05.556 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Balance for acc1: 300.0
+2026-04-25 20:57:05.556 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/GetBalance in 0ms
+2026-04-25 20:57:06.345 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Deposit acc1 += 100.0 → balance: 400.0
+2026-04-25 20:57:06.345 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Deposit in 0ms
+2026-04-25 20:57:06.346 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Withdrawal acc1 -= 50.0 → balance: 350.0
+2026-04-25 20:57:06.347 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Withdraw in 0ms
+2026-04-25 20:57:06.348 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Transfer 25.0 from acc1 to acc2 → new balance: 325.0
+2026-04-25 20:57:06.349 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Transfer in 1ms
+2026-04-25 20:57:06.350 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Balance for acc1: 325.0
+2026-04-25 20:57:06.350 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/GetBalance in 0ms
+2026-04-25 20:57:07.240 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Deposit acc1 += 100.0 → balance: 425.0
+2026-04-25 20:57:07.241 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Deposit in 0ms
+2026-04-25 20:57:07.242 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Withdrawal acc1 -= 50.0 → balance: 375.0
+2026-04-25 20:57:07.242 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Withdraw in 0ms
+2026-04-25 20:57:07.243 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Transfer 25.0 from acc1 to acc2 → new balance: 350.0
+2026-04-25 20:57:07.243 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Transfer in 0ms
+2026-04-25 20:57:07.244 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Balance for acc1: 350.0
+2026-04-25 20:57:07.245 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/GetBalance in 1ms
+2026-04-25 20:57:11.872 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Deposit acc1 += 100.0 → balance: 450.0
+2026-04-25 20:57:11.873 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Deposit in 0ms
+2026-04-25 20:57:11.874 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Withdrawal acc1 -= 50.0 → balance: 400.0
+2026-04-25 20:57:11.874 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Withdraw in 0ms
+2026-04-25 20:57:11.875 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Transfer 25.0 from acc1 to acc2 → new balance: 375.0
+2026-04-25 20:57:11.875 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Transfer in 0ms
+2026-04-25 20:57:11.876 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Balance for acc1: 375.0
+2026-04-25 20:57:11.877 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/GetBalance in 0ms
+2026-04-25 20:57:32.422 [main] INFO  org.paul.BankingServer - Server started on port 50051
+2026-04-25 20:57:38.834 [ForkJoinPool.commonPool-worker-1] INFO  org.paul.BankingService - Deposit acc1 += 100.0 → balance: 100.0
+2026-04-25 20:57:38.843 [grpc-default-executor-0] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Deposit in 21ms
+2026-04-25 20:57:38.846 [ForkJoinPool.commonPool-worker-1] ERROR org.paul.BankingService - Withdrawal failed
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: Insufficient funds
+	at java.base/java.util.concurrent.CompletableFuture.wrapInCompletionException(CompletableFuture.java:323) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:359) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:364) [?:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1791) [?:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1781) [?:?]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511) [?:?]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450) [?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019) [?:?]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187) [?:?]
+Caused by: java.lang.IllegalArgumentException: Insufficient funds
+	at org.paul.BankingService.lambda$withdraw$1(BankingService.java:56) ~[main/:?]
+	at java.base/java.util.concurrent.ConcurrentHashMap.compute(ConcurrentHashMap.java:1956) ~[?:?]
+	at org.paul.BankingService.lambda$withdraw$0(BankingService.java:53) ~[main/:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1789) ~[?:?]
+	... 5 more
+2026-04-25 20:57:38.850 [grpc-default-executor-0] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Withdraw in 6ms
+2026-04-25 21:00:54.195 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Deposit acc1 += 100.0 → balance: 200.0
+2026-04-25 21:00:54.196 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Deposit in 1ms
+2026-04-25 21:00:54.197 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Withdrawal acc1 -= 150.0 → balance: 50.0
+2026-04-25 21:00:54.198 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Withdraw in 1ms
+2026-04-25 21:00:54.201 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Transfer 25.0 from acc1 to acc2 → new balance: 25.0
+2026-04-25 21:00:54.202 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Transfer in 3ms
+2026-04-25 21:00:54.204 [grpc-default-executor-1] INFO  org.paul.BankingService - Balance for acc1: 25.0
+2026-04-25 21:00:54.206 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/GetBalance in 3ms
+2026-04-25 21:00:55.262 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Deposit acc1 += 100.0 → balance: 125.0
+2026-04-25 21:00:55.263 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Deposit in 1ms
+2026-04-25 21:00:55.264 [ForkJoinPool.commonPool-worker-2] ERROR org.paul.BankingService - Withdrawal failed
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: Insufficient funds
+	at java.base/java.util.concurrent.CompletableFuture.wrapInCompletionException(CompletableFuture.java:323) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:359) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:364) [?:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1791) [?:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1781) [?:?]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511) [?:?]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450) [?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019) [?:?]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187) [?:?]
+Caused by: java.lang.IllegalArgumentException: Insufficient funds
+	at org.paul.BankingService.lambda$withdraw$1(BankingService.java:56) ~[main/:?]
+	at java.base/java.util.concurrent.ConcurrentHashMap.compute(ConcurrentHashMap.java:1956) ~[?:?]
+	at org.paul.BankingService.lambda$withdraw$0(BankingService.java:53) ~[main/:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1789) ~[?:?]
+	... 5 more
+2026-04-25 21:00:55.265 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Withdraw in 0ms
+2026-04-25 21:00:55.930 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Deposit acc1 += 100.0 → balance: 225.0
+2026-04-25 21:00:55.932 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Deposit in 1ms
+2026-04-25 21:00:55.933 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Withdrawal acc1 -= 150.0 → balance: 75.0
+2026-04-25 21:00:55.935 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Withdraw in 1ms
+2026-04-25 21:00:55.936 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Transfer 25.0 from acc1 to acc2 → new balance: 50.0
+2026-04-25 21:00:55.936 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Transfer in 1ms
+2026-04-25 21:00:55.937 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Balance for acc1: 50.0
+2026-04-25 21:00:55.938 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/GetBalance in 1ms
+2026-04-25 21:00:56.917 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Deposit acc1 += 100.0 → balance: 150.0
+2026-04-25 21:00:56.918 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Deposit in 1ms
+2026-04-25 21:00:56.919 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Withdrawal acc1 -= 150.0 → balance: 0.0
+2026-04-25 21:00:56.920 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Withdraw in 1ms
+2026-04-25 21:00:56.921 [ForkJoinPool.commonPool-worker-2] ERROR org.paul.BankingService - Transfer failed
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: Insufficient funds
+	at java.base/java.util.concurrent.CompletableFuture.wrapInCompletionException(CompletableFuture.java:323) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:359) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:364) [?:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1791) [?:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1781) [?:?]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511) [?:?]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450) [?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019) [?:?]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187) [?:?]
+Caused by: java.lang.IllegalArgumentException: Insufficient funds
+	at org.paul.BankingService.lambda$transfer$1(BankingService.java:101) ~[main/:?]
+	at java.base/java.util.concurrent.ConcurrentHashMap.compute(ConcurrentHashMap.java:1956) ~[?:?]
+	at org.paul.BankingService.lambda$transfer$0(BankingService.java:98) ~[main/:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1789) ~[?:?]
+	... 5 more
+2026-04-25 21:00:56.921 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Transfer in 0ms
+2026-04-25 21:00:57.993 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Deposit acc1 += 100.0 → balance: 100.0
+2026-04-25 21:00:57.994 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Deposit in 1ms
+2026-04-25 21:00:57.995 [ForkJoinPool.commonPool-worker-2] ERROR org.paul.BankingService - Withdrawal failed
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: Insufficient funds
+	at java.base/java.util.concurrent.CompletableFuture.wrapInCompletionException(CompletableFuture.java:323) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:359) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:364) [?:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1791) [?:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1781) [?:?]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511) [?:?]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450) [?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019) [?:?]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187) [?:?]
+Caused by: java.lang.IllegalArgumentException: Insufficient funds
+	at org.paul.BankingService.lambda$withdraw$1(BankingService.java:56) ~[main/:?]
+	at java.base/java.util.concurrent.ConcurrentHashMap.compute(ConcurrentHashMap.java:1956) ~[?:?]
+	at org.paul.BankingService.lambda$withdraw$0(BankingService.java:53) ~[main/:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1789) ~[?:?]
+	... 5 more
+2026-04-25 21:00:57.996 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Withdraw in 0ms
+2026-04-25 21:00:58.719 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Deposit acc1 += 100.0 → balance: 200.0
+2026-04-25 21:00:58.720 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Deposit in 0ms
+2026-04-25 21:00:58.721 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Withdrawal acc1 -= 150.0 → balance: 50.0
+2026-04-25 21:00:58.721 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Withdraw in 0ms
+2026-04-25 21:00:58.722 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Transfer 25.0 from acc1 to acc2 → new balance: 25.0
+2026-04-25 21:00:58.723 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Transfer in 0ms
+2026-04-25 21:00:58.723 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Balance for acc1: 25.0
+2026-04-25 21:00:58.724 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/GetBalance in 0ms
+2026-04-25 21:00:59.566 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Deposit acc1 += 100.0 → balance: 125.0
+2026-04-25 21:00:59.567 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Deposit in 0ms
+2026-04-25 21:00:59.568 [ForkJoinPool.commonPool-worker-2] ERROR org.paul.BankingService - Withdrawal failed
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: Insufficient funds
+	at java.base/java.util.concurrent.CompletableFuture.wrapInCompletionException(CompletableFuture.java:323) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:359) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:364) [?:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1791) [?:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1781) [?:?]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511) [?:?]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450) [?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019) [?:?]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187) [?:?]
+Caused by: java.lang.IllegalArgumentException: Insufficient funds
+	at org.paul.BankingService.lambda$withdraw$1(BankingService.java:56) ~[main/:?]
+	at java.base/java.util.concurrent.ConcurrentHashMap.compute(ConcurrentHashMap.java:1956) ~[?:?]
+	at org.paul.BankingService.lambda$withdraw$0(BankingService.java:53) ~[main/:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1789) ~[?:?]
+	... 5 more
+2026-04-25 21:00:59.568 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Withdraw in 0ms
+2026-04-25 21:01:00.384 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Deposit acc1 += 100.0 → balance: 225.0
+2026-04-25 21:01:00.384 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Deposit in 0ms
+2026-04-25 21:01:00.385 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Withdrawal acc1 -= 150.0 → balance: 75.0
+2026-04-25 21:01:00.386 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Withdraw in 0ms
+2026-04-25 21:01:00.386 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Transfer 25.0 from acc1 to acc2 → new balance: 50.0
+2026-04-25 21:01:00.387 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Transfer in 0ms
+2026-04-25 21:01:00.387 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Balance for acc1: 50.0
+2026-04-25 21:01:00.388 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/GetBalance in 0ms
+2026-04-25 21:01:07.030 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Deposit acc1 += 100.0 → balance: 150.0
+2026-04-25 21:01:07.030 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Deposit in 0ms
+2026-04-25 21:01:07.032 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Withdrawal acc1 -= 150.0 → balance: 0.0
+2026-04-25 21:01:07.032 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Withdraw in 1ms
+2026-04-25 21:01:07.033 [ForkJoinPool.commonPool-worker-2] ERROR org.paul.BankingService - Transfer failed
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: Insufficient funds
+	at java.base/java.util.concurrent.CompletableFuture.wrapInCompletionException(CompletableFuture.java:323) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:359) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:364) [?:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1791) [?:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1781) [?:?]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511) [?:?]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450) [?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019) [?:?]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187) [?:?]
+Caused by: java.lang.IllegalArgumentException: Insufficient funds
+	at org.paul.BankingService.lambda$transfer$1(BankingService.java:101) ~[main/:?]
+	at java.base/java.util.concurrent.ConcurrentHashMap.compute(ConcurrentHashMap.java:1956) ~[?:?]
+	at org.paul.BankingService.lambda$transfer$0(BankingService.java:98) ~[main/:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1789) ~[?:?]
+	... 5 more
+2026-04-25 21:01:07.034 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Transfer in 0ms
+2026-04-25 21:01:07.125 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Deposit acc1 += 100.0 → balance: 100.0
+2026-04-25 21:01:07.126 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Deposit in 1ms
+2026-04-25 21:01:07.127 [ForkJoinPool.commonPool-worker-2] ERROR org.paul.BankingService - Withdrawal failed
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: Insufficient funds
+	at java.base/java.util.concurrent.CompletableFuture.wrapInCompletionException(CompletableFuture.java:323) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:359) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:364) [?:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1791) [?:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1781) [?:?]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511) [?:?]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450) [?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019) [?:?]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187) [?:?]
+Caused by: java.lang.IllegalArgumentException: Insufficient funds
+	at org.paul.BankingService.lambda$withdraw$1(BankingService.java:56) ~[main/:?]
+	at java.base/java.util.concurrent.ConcurrentHashMap.compute(ConcurrentHashMap.java:1956) ~[?:?]
+	at org.paul.BankingService.lambda$withdraw$0(BankingService.java:53) ~[main/:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1789) ~[?:?]
+	... 5 more
+2026-04-25 21:01:07.128 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Withdraw in 0ms
+2026-04-25 21:01:07.217 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Deposit acc1 += 100.0 → balance: 200.0
+2026-04-25 21:01:07.218 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Deposit in 0ms
+2026-04-25 21:01:07.219 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Withdrawal acc1 -= 150.0 → balance: 50.0
+2026-04-25 21:01:07.220 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Withdraw in 0ms
+2026-04-25 21:01:07.221 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Transfer 25.0 from acc1 to acc2 → new balance: 25.0
+2026-04-25 21:01:07.221 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Transfer in 0ms
+2026-04-25 21:01:07.222 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Balance for acc1: 25.0
+2026-04-25 21:01:07.223 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/GetBalance in 0ms
+2026-04-25 21:01:07.315 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Deposit acc1 += 100.0 → balance: 125.0
+2026-04-25 21:01:07.316 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Deposit in 0ms
+2026-04-25 21:01:07.317 [ForkJoinPool.commonPool-worker-2] ERROR org.paul.BankingService - Withdrawal failed
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: Insufficient funds
+	at java.base/java.util.concurrent.CompletableFuture.wrapInCompletionException(CompletableFuture.java:323) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:359) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:364) [?:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1791) [?:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1781) [?:?]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511) [?:?]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450) [?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019) [?:?]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187) [?:?]
+Caused by: java.lang.IllegalArgumentException: Insufficient funds
+	at org.paul.BankingService.lambda$withdraw$1(BankingService.java:56) ~[main/:?]
+	at java.base/java.util.concurrent.ConcurrentHashMap.compute(ConcurrentHashMap.java:1956) ~[?:?]
+	at org.paul.BankingService.lambda$withdraw$0(BankingService.java:53) ~[main/:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1789) ~[?:?]
+	... 5 more
+2026-04-25 21:01:07.317 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Withdraw in 0ms
+2026-04-25 21:01:07.410 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Deposit acc1 += 100.0 → balance: 225.0
+2026-04-25 21:01:07.410 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Deposit in 0ms
+2026-04-25 21:01:07.411 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Withdrawal acc1 -= 150.0 → balance: 75.0
+2026-04-25 21:01:07.412 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Withdraw in 0ms
+2026-04-25 21:01:07.412 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Transfer 25.0 from acc1 to acc2 → new balance: 50.0
+2026-04-25 21:01:07.413 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Transfer in 0ms
+2026-04-25 21:01:07.414 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Balance for acc1: 50.0
+2026-04-25 21:01:07.414 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/GetBalance in 0ms
+2026-04-25 21:01:07.503 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Deposit acc1 += 100.0 → balance: 150.0
+2026-04-25 21:01:07.504 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Deposit in 1ms
+2026-04-25 21:01:07.505 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Withdrawal acc1 -= 150.0 → balance: 0.0
+2026-04-25 21:01:07.505 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Withdraw in 0ms
+2026-04-25 21:01:07.506 [ForkJoinPool.commonPool-worker-2] ERROR org.paul.BankingService - Transfer failed
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: Insufficient funds
+	at java.base/java.util.concurrent.CompletableFuture.wrapInCompletionException(CompletableFuture.java:323) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:359) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:364) [?:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1791) [?:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1781) [?:?]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511) [?:?]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450) [?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019) [?:?]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187) [?:?]
+Caused by: java.lang.IllegalArgumentException: Insufficient funds
+	at org.paul.BankingService.lambda$transfer$1(BankingService.java:101) ~[main/:?]
+	at java.base/java.util.concurrent.ConcurrentHashMap.compute(ConcurrentHashMap.java:1956) ~[?:?]
+	at org.paul.BankingService.lambda$transfer$0(BankingService.java:98) ~[main/:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1789) ~[?:?]
+	... 5 more
+2026-04-25 21:01:07.507 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Transfer in 0ms
+2026-04-25 21:02:26.196 [ForkJoinPool.commonPool-worker-3] INFO  org.paul.BankingService - Deposit acc1 += 100.0 → balance: 100.0
+2026-04-25 21:02:26.199 [grpc-default-executor-2] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Deposit in 4ms
+2026-04-25 21:02:26.202 [ForkJoinPool.commonPool-worker-3] ERROR org.paul.BankingService - Withdrawal failed
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: Insufficient funds
+	at java.base/java.util.concurrent.CompletableFuture.wrapInCompletionException(CompletableFuture.java:323) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:359) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:364) [?:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1791) [?:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1781) [?:?]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511) [?:?]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450) [?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019) [?:?]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187) [?:?]
+Caused by: java.lang.IllegalArgumentException: Insufficient funds
+	at org.paul.BankingService.lambda$withdraw$1(BankingService.java:56) ~[main/:?]
+	at java.base/java.util.concurrent.ConcurrentHashMap.compute(ConcurrentHashMap.java:1956) ~[?:?]
+	at org.paul.BankingService.lambda$withdraw$0(BankingService.java:53) ~[main/:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1789) ~[?:?]
+	... 5 more
+2026-04-25 21:02:26.204 [grpc-default-executor-3] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Withdraw in 3ms
+2026-04-25 21:02:57.948 [ForkJoinPool.commonPool-worker-3] INFO  org.paul.BankingService - Deposit acc1 += 100.0 → balance: 200.0
+2026-04-25 21:02:57.953 [grpc-default-executor-3] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Deposit in 7ms
+2026-04-25 21:02:57.955 [ForkJoinPool.commonPool-worker-3] INFO  org.paul.BankingService - Withdrawal acc1 -= 150.0 → balance: 50.0
+2026-04-25 21:02:57.957 [grpc-default-executor-2] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Withdraw in 4ms
+2026-04-25 21:02:57.958 [ForkJoinPool.commonPool-worker-3] INFO  org.paul.BankingService - Transfer 25.0 from acc1 to acc2 → new balance: 25.0
+2026-04-25 21:02:57.959 [grpc-default-executor-2] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Transfer in 0ms
+2026-04-25 21:02:57.960 [ForkJoinPool.commonPool-worker-3] INFO  org.paul.BankingService - Balance for acc1: 25.0
+2026-04-25 21:02:57.960 [grpc-default-executor-2] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/GetBalance in 0ms
+2026-04-25 21:05:59.207 [main] INFO  org.paul.BankingServer - Server started on port 50051
+2026-04-25 21:06:16.781 [main] INFO  org.paul.BankingServer - Server started on port 50051
+2026-04-25 21:06:17.980 [ForkJoinPool.commonPool-worker-1] INFO  org.paul.BankingService - Deposit acc1 += 100.0 → balance: 100.0
+2026-04-25 21:06:17.987 [grpc-default-executor-0] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Deposit in 20ms
+2026-04-25 21:06:17.991 [ForkJoinPool.commonPool-worker-1] ERROR org.paul.BankingService - Withdrawal failed
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: Insufficient funds
+	at java.base/java.util.concurrent.CompletableFuture.wrapInCompletionException(CompletableFuture.java:323) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:359) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:364) [?:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1791) [?:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1781) [?:?]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511) [?:?]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450) [?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019) [?:?]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187) [?:?]
+Caused by: java.lang.IllegalArgumentException: Insufficient funds
+	at org.paul.BankingService.lambda$withdraw$1(BankingService.java:55) ~[main/:?]
+	at java.base/java.util.concurrent.ConcurrentHashMap.compute(ConcurrentHashMap.java:1956) ~[?:?]
+	at org.paul.BankingService.lambda$withdraw$0(BankingService.java:52) ~[main/:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1789) ~[?:?]
+	... 5 more
+2026-04-25 21:06:17.995 [grpc-default-executor-0] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Withdraw in 6ms
+2026-04-25 21:06:17.998 [ForkJoinPool.commonPool-worker-1] INFO  org.paul.BankingService - Transfer 25.0 from acc1 to acc2 → new balance: 75.0
+2026-04-25 21:06:17.999 [grpc-default-executor-0] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Transfer in 3ms
+2026-04-25 21:06:18.002 [grpc-default-executor-0] INFO  org.paul.BankingService - Balance for acc1: 75.0
+2026-04-25 21:06:18.004 [grpc-default-executor-0] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/GetBalance in 3ms
+2026-04-25 21:08:40.197 [main] INFO  org.paul.BankingServer - Server started on port 50051
+2026-04-25 21:08:42.238 [ForkJoinPool.commonPool-worker-1] INFO  org.paul.BankingService - Deposit acc1 += 100.0 → balance: 100.0
+2026-04-25 21:08:42.246 [grpc-default-executor-0] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Deposit in 20ms
+2026-04-25 21:08:42.249 [ForkJoinPool.commonPool-worker-1] ERROR org.paul.BankingService - Withdrawal failed
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: Insufficient funds
+	at java.base/java.util.concurrent.CompletableFuture.wrapInCompletionException(CompletableFuture.java:323) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:359) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:364) [?:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1791) [?:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1781) [?:?]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511) [?:?]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450) [?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019) [?:?]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187) [?:?]
+Caused by: java.lang.IllegalArgumentException: Insufficient funds
+	at org.paul.BankingService.lambda$withdraw$1(BankingService.java:55) ~[main/:?]
+	at java.base/java.util.concurrent.ConcurrentHashMap.compute(ConcurrentHashMap.java:1956) ~[?:?]
+	at org.paul.BankingService.lambda$withdraw$0(BankingService.java:52) ~[main/:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1789) ~[?:?]
+	... 5 more
+2026-04-25 21:08:42.253 [grpc-default-executor-0] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Withdraw in 5ms
+2026-04-25 21:08:42.256 [ForkJoinPool.commonPool-worker-1] INFO  org.paul.BankingService - Transfer 25.0 from acc1 to acc2 → new balance: 75.0
+2026-04-25 21:08:42.257 [grpc-default-executor-0] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Transfer in 2ms
+2026-04-25 21:08:42.259 [grpc-default-executor-0] INFO  org.paul.BankingService - Balance for acc1: 75.0
+2026-04-25 21:08:42.260 [grpc-default-executor-0] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/GetBalance in 2ms
+2026-04-25 21:08:45.207 [ForkJoinPool.commonPool-worker-1] INFO  org.paul.BankingService - Deposit acc1 += 100.0 → balance: 175.0
+2026-04-25 21:08:45.208 [grpc-default-executor-0] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Deposit in 1ms
+2026-04-25 21:08:45.209 [ForkJoinPool.commonPool-worker-1] INFO  org.paul.BankingService - Withdrawal acc1 -= 150.0 → balance: 25.0
+2026-04-25 21:08:45.210 [grpc-default-executor-0] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Withdraw in 1ms
+2026-04-25 21:08:45.211 [ForkJoinPool.commonPool-worker-1] INFO  org.paul.BankingService - Transfer 25.0 from acc1 to acc2 → new balance: 0.0
+2026-04-25 21:08:45.212 [grpc-default-executor-0] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Transfer in 0ms
+2026-04-25 21:08:45.213 [ForkJoinPool.commonPool-worker-1] INFO  org.paul.BankingService - Balance for acc1: 0.0
+2026-04-25 21:08:45.214 [grpc-default-executor-0] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/GetBalance in 1ms
+2026-04-25 21:08:49.216 [ForkJoinPool.commonPool-worker-1] INFO  org.paul.BankingService - Deposit acc1 += 100.0 → balance: 100.0
+2026-04-25 21:08:49.217 [grpc-default-executor-0] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Deposit in 1ms
+2026-04-25 21:08:49.219 [ForkJoinPool.commonPool-worker-1] ERROR org.paul.BankingService - Withdrawal failed
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: Insufficient funds
+	at java.base/java.util.concurrent.CompletableFuture.wrapInCompletionException(CompletableFuture.java:323) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:359) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:364) [?:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1791) [?:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1781) [?:?]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511) [?:?]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450) [?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019) [?:?]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187) [?:?]
+Caused by: java.lang.IllegalArgumentException: Insufficient funds
+	at org.paul.BankingService.lambda$withdraw$1(BankingService.java:55) ~[main/:?]
+	at java.base/java.util.concurrent.ConcurrentHashMap.compute(ConcurrentHashMap.java:1956) ~[?:?]
+	at org.paul.BankingService.lambda$withdraw$0(BankingService.java:52) ~[main/:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1789) ~[?:?]
+	... 5 more
+2026-04-25 21:08:49.220 [grpc-default-executor-0] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Withdraw in 1ms
+2026-04-25 21:08:49.221 [ForkJoinPool.commonPool-worker-1] INFO  org.paul.BankingService - Transfer 25.0 from acc1 to acc2 → new balance: 75.0
+2026-04-25 21:08:49.222 [grpc-default-executor-0] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Transfer in 1ms
+2026-04-25 21:08:49.222 [ForkJoinPool.commonPool-worker-1] INFO  org.paul.BankingService - Balance for acc1: 75.0
+2026-04-25 21:08:49.223 [grpc-default-executor-0] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/GetBalance in 1ms
+2026-04-25 21:09:56.698 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Deposit acc1 += 100.0 → balance: 175.0
+2026-04-25 21:09:56.699 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Deposit in 1ms
+2026-04-25 21:09:56.701 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Withdrawal acc1 -= 150.0 → balance: 25.0
+2026-04-25 21:09:56.701 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Withdraw in 0ms
+2026-04-25 21:09:56.702 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Transfer 25.0 from acc1 to acc2 → new balance: 0.0
+2026-04-25 21:09:56.703 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Transfer in 0ms
+2026-04-25 21:09:56.703 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Balance for acc1: 0.0
+2026-04-25 21:09:56.704 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/GetBalance in 0ms
+2026-04-25 21:10:00.658 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Deposit acc1 += 100.0 → balance: 100.0
+2026-04-25 21:10:00.659 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Deposit in 1ms
+2026-04-25 21:10:00.660 [ForkJoinPool.commonPool-worker-2] ERROR org.paul.BankingService - Withdrawal failed
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: Insufficient funds
+	at java.base/java.util.concurrent.CompletableFuture.wrapInCompletionException(CompletableFuture.java:323) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:359) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:364) [?:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1791) [?:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1781) [?:?]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511) [?:?]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450) [?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019) [?:?]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187) [?:?]
+Caused by: java.lang.IllegalArgumentException: Insufficient funds
+	at org.paul.BankingService.lambda$withdraw$1(BankingService.java:55) ~[main/:?]
+	at java.base/java.util.concurrent.ConcurrentHashMap.compute(ConcurrentHashMap.java:1956) ~[?:?]
+	at org.paul.BankingService.lambda$withdraw$0(BankingService.java:52) ~[main/:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1789) ~[?:?]
+	... 5 more
+2026-04-25 21:10:00.661 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Withdraw in 0ms
+2026-04-25 21:10:00.662 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Transfer 25.0 from acc1 to acc2 → new balance: 75.0
+2026-04-25 21:10:00.663 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/Transfer in 0ms
+2026-04-25 21:10:00.664 [ForkJoinPool.commonPool-worker-2] INFO  org.paul.BankingService - Balance for acc1: 75.0
+2026-04-25 21:10:00.664 [grpc-default-executor-1] INFO  org.paul.LoggingInterceptor - Completed request: org.paul.BankingService/GetBalance in 0ms

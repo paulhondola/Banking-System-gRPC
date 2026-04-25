@@ -34,8 +34,7 @@ public class BankingService extends BankingServiceGrpc.BankingServiceImplBase {
                     responseObserver.onCompleted();
                 })
                 .exceptionally(ex -> {
-                    logger.error("Deposit failed", ex);
-                    responseObserver.onError(ex);
+                    handleError(ex, responseObserver, "Deposit");
                     return null;
                 });
     }
@@ -71,8 +70,7 @@ public class BankingService extends BankingServiceGrpc.BankingServiceImplBase {
                     responseObserver.onCompleted();
                 })
                 .exceptionally(ex -> {
-                    logger.error("Withdrawal failed", ex);
-                    responseObserver.onError(ex);
+                    handleError(ex, responseObserver, "Withdrawal");
                     return null;
                 });
     }
@@ -119,8 +117,7 @@ public class BankingService extends BankingServiceGrpc.BankingServiceImplBase {
                     responseObserver.onCompleted();
                 })
                 .exceptionally(ex -> {
-                    logger.error("Transfer failed", ex);
-                    responseObserver.onError(ex);
+                    handleError(ex, responseObserver, "Transfer");
                     return null;
                 });
     }
@@ -138,9 +135,18 @@ public class BankingService extends BankingServiceGrpc.BankingServiceImplBase {
                     responseObserver.onCompleted();
                 })
                 .exceptionally(ex -> {
-                    logger.error("Get balance failed", ex);
-                    responseObserver.onError(ex);
+                    handleError(ex, responseObserver, "Get balance");
                     return null;
                 });
+    }
+
+    private void handleError(Throwable ex, StreamObserver<?> responseObserver, String operation) {
+        logger.error("{} failed", operation, ex);
+        Throwable cause = (ex instanceof java.util.concurrent.CompletionException && ex.getCause() != null) ? ex.getCause() : ex;
+        if (cause instanceof IllegalArgumentException) {
+            responseObserver.onError(io.grpc.Status.INVALID_ARGUMENT.withDescription(cause.getMessage()).asRuntimeException());
+        } else {
+            responseObserver.onError(io.grpc.Status.INTERNAL.withDescription(cause.getMessage()).asRuntimeException());
+        }
     }
 }

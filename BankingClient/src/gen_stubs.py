@@ -12,7 +12,7 @@ def main() -> None:
             f"-I{proto_dir}",
             f"--python_out={src}",
             f"--grpc_python_out={src}",
-            str(proto_dir / "math.proto"),
+            str(proto_dir / "banking.proto"),
         ],
         check=True,
     )

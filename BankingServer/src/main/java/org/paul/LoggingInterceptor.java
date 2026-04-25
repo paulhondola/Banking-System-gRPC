@@ -21,13 +21,13 @@ public class LoggingInterceptor implements ServerInterceptor {
 
         String method = call.getMethodDescriptor().getFullMethodName();
         logger.debug("Incoming request: {}", method);
-        
+
         long startTime = System.nanoTime();
 
         ServerCall.Listener<ReqT> listener = next.startCall(
-                new ForwardingServerCall.SimpleForwardingServerCall<>(call) {},
-                headers
-        );
+                new ForwardingServerCall.SimpleForwardingServerCall<>(call) {
+                },
+                headers);
 
         return new ForwardingServerCallListener.SimpleForwardingServerCallListener<>(listener) {
             @Override
