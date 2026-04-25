@@ -11,25 +11,27 @@ A banking client-server application using **gRPC** and **Protocol Buffers** as t
 ### Server — Java 17 + Maven
 
 **Rationale:**
+
 - The provided `docs/MathGRPC/` example is a complete reference implementation in Java — the banking server adapts the same Maven + `protobuf-maven-plugin` setup.
 - `grpc-java` (io.grpc) is the reference gRPC implementation for the JVM — battle-tested, well-documented.
 - Maven auto-generates Java stubs from `.proto` at `mvn compile` — no manual `protoc` invocation needed.
 
 **Key dependencies:**
 
-| Dependency | Purpose |
-|---|---|
-| `grpc-netty-shaded` | HTTP/2 transport layer |
-| `grpc-protobuf` | Protobuf serialization |
-| `grpc-stub` | Generated blocking/async stubs |
-| `protobuf-maven-plugin` | Runs `protoc` at build time |
-| `javax.annotation-api` | Required for Java 9+ annotation support |
+| Dependency              | Purpose                                 |
+| ----------------------- | --------------------------------------- |
+| `grpc-netty-shaded`     | HTTP/2 transport layer                  |
+| `grpc-protobuf`         | Protobuf serialization                  |
+| `grpc-stub`             | Generated blocking/async stubs          |
+| `protobuf-maven-plugin` | Runs `protoc` at build time             |
+| `javax.annotation-api`  | Required for Java 9+ annotation support |
 
 ---
 
 ### Client — Python 3
 
 **Rationale:**
+
 - Maximum language contrast with Java — different type system, runtime, and ecosystem.
 - `grpcio` and `grpcio-tools` are first-class gRPC libraries maintained by Google.
 - `grpc_tools.protoc` generates Python stubs from the **same shared `.proto`** used by the Java server, directly demonstrating cross-language interoperability.
@@ -38,9 +40,9 @@ A banking client-server application using **gRPC** and **Protocol Buffers** as t
 
 **Key packages:**
 
-| Package | Purpose |
-|---|---|
-| `grpcio` | gRPC runtime for Python |
+| Package        | Purpose                                      |
+| -------------- | -------------------------------------------- |
+| `grpcio`       | gRPC runtime for Python                      |
 | `grpcio-tools` | Includes `protoc` for Python stub generation |
 
 ---
@@ -112,6 +114,7 @@ Create `proto/banking.proto` with the contract above.
 - `BankingServer` starts `ServerBuilder.forPort(50051)`.
 
 **Build & run:**
+
 ```bash
 cd server
 mvn clean compile
@@ -121,6 +124,7 @@ mvn exec:java -Dexec.mainClass="banking.BankingServer"
 ### 3. Python Client
 
 Generate stubs from the shared proto:
+
 ```bash
 cd client
 pip install grpcio grpcio-tools
@@ -131,6 +135,7 @@ python -m grpc_tools.protoc -I../proto \
 `banking_client.py` connects to `localhost:50051` and exercises all four operations with example accounts.
 
 **Run:**
+
 ```bash
 python banking_client.py
 ```
@@ -139,19 +144,19 @@ python banking_client.py
 
 ## Verification
 
-| Step | Command | Expected |
-|---|---|---|
-| Start server | `mvn exec:java -Dexec.mainClass="banking.BankingServer"` | `Server started on port 50051` |
-| Run client | `python banking_client.py` | All 4 operations return correct balances |
-| Server logs | (stdout) | RPC calls logged per operation |
+| Step         | Command                                                  | Expected                                 |
+| ------------ | -------------------------------------------------------- | ---------------------------------------- |
+| Start server | `mvn exec:java -Dexec.mainClass="banking.BankingServer"` | `Server started on port 50051`           |
+| Run client   | `python banking_client.py`                               | All 4 operations return correct balances |
+| Server logs  | (stdout)                                                 | RPC calls logged per operation           |
 
 ---
 
 ## Key Design Decisions
 
-| Decision | Choice | Reason |
-|---|---|---|
-| Account storage | `HashMap<String, Double>` | Simplicity — focus on RPC, not persistence |
-| Transport | Plaintext (no TLS) | Academic context, matches MathGRPC example |
-| Stub type | Blocking (synchronous) | Simpler to demonstrate; matches MathClient pattern |
-| Port | 50051 | gRPC convention, matches provided example |
+| Decision        | Choice                    | Reason                                             |
+| --------------- | ------------------------- | -------------------------------------------------- |
+| Account storage | `HashMap<String, Double>` | Simplicity — focus on RPC, not persistence         |
+| Transport       | Plaintext (no TLS)        | Academic context, matches MathGRPC example         |
+| Stub type       | Blocking (synchronous)    | Simpler to demonstrate; matches MathClient pattern |
+| Port            | 50051                     | gRPC convention, matches provided example          |

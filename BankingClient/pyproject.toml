@@ -2,4 +2,21 @@
 name = "bankingclient"
 version = "0.1.0"
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+    "grpcio>=1.80.0",
+    "grpcio-tools>=1.80.0",
+    "ruff>=0.15.12",
+]
+
+[project.scripts]
+gen-stubs = "gen_stubs:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["main", "gen_stubs"]
+
+[tool.setuptools.package-dir]
+"" = "src"
